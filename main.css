@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    background-image: url(http://tacycresson.com/wp-content/uploads/2017/12/workforce-housing.png);
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 2% 10%;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.questionProgress {
+    display: flex;
+    padding: 8px;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    background: rgb(221, 232, 247);
+}
+li {
+    width: 33.33%;
+    font-size: 25px;
+    font-variant: small-caps;
+    font-weight: 700; 
+}
+
+.quizStart, .box {
+    display: flex;
+    margin: 2% 10%;
+    height: 500px;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px 5px #000000;
+    text-align: center;
+    background-color: white;
+}
+.eivStart {
+    font-size: 60px;
+    text-shadow: 10px 10px 10px rgba(37,42,207,0.36);
+}
+.letsTest {
+    font-size: 40px;
+}
+.startButton {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(221, 232, 247);
+}
