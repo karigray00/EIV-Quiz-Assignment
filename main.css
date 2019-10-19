@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
-    padding: 0;
+    margin: 0;
 }
+
 body {
     background-image: url(http://tacycresson.com/wp-content/uploads/2017/12/workforce-housing.png);
 }
@@ -28,13 +29,13 @@ li {
     font-weight: 700; 
 }
 
-.quizStart, .box {
+.box {
     display: flex;
-    margin: 2% 10%;
     height: 500px;
+    text-align: center;
+    margin: 2% 10%;
     flex-direction: column;
     box-shadow: 5px 5px 15px 5px #000000;
-    text-align: center;
     background-color: white;
 }
 .eivStart {
@@ -52,4 +53,48 @@ li {
     width: 150px;
     height: 50px;
     background-color: rgb(221, 232, 247);
+}
+.questionBox {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    text-align: left;
+    margin: 2% 10%;
+    padding: 10px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    background-color: white;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.correctAnswer {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    text-align: left;
+    margin: 2% 10%;
+    padding: 10px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    background-color: white;
+}
+.incorrectAnswer {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    text-align: left;
+    margin: 2% 10%;
+    padding: 10px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    background-color: white;
+}
+.finalScore {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    text-align: left;
+    margin: 2% 10%;
+    padding: 10px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    background-color: white;
 }
