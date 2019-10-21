@@ -38,63 +38,423 @@ li {
     box-shadow: 5px 5px 15px 5px #000000;
     background-color: white;
 }
-.eivStart {
-    font-size: 60px;
-    text-shadow: 10px 10px 10px rgba(37,42,207,0.36);
+#startQuizBox {
+    padding: 10%
 }
 .letsTest {
-    font-size: 40px;
+    font-size: 30px;
+}
+.eivStart {
+    font-size: 50px;
+    text-shadow: 10px 10px 10px rgba(37,42,207,0.36);
+    margin: 2%;
 }
 .startButton {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     justify-content: center;
-    width: 150px;
+    width: 200px;
     height: 50px;
     background-color: rgb(221, 232, 247);
 }
-.questionBox {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    text-align: left;
-    margin: 2% 10%;
-    padding: 10px;
-    box-shadow: 5px 5px 15px 5px #000000;
-    background-color: white;
+
+#questionBox {
+    padding: 3%;
+    border: 5px groove rgb(37, 26, 48);
+    justify-content: left;
 }
-label {
+legend {
+    padding: 2%;
+    border: groove rgb(69, 57, 80);
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.questions {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    margin: 4%;
+    font-family: 'Cabin', sans-serif;
+}
+#submit {
+    margin-bottom: 2%;
+    width: 200px;
+    height: 50px;
+}
+
+.giphy-embed {
+    display: flex;
+    margin: 0 auto;  
+}
+
+#correctAnswer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background:  rgb(69, 57, 80);
+    padding: 3%;
+    width: 750px;
+}
+#correctAnswer h1{
+    font-family:'Cabin', sans-serif;
+    font-size: 30pt;
+    color: #FFF;
+    text-shadow: 0 0 5px black, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fdee64, 0 0 30px  #fdee64, 0 0 40px  #fdee64, 0 0 55px #fdee64, 0 0 75px  #fdee64
+}
+.correct {
     display: block;
-    margin-bottom: 5px;
-}
-.correctAnswer {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    text-align: left;
-    margin: 2% 10%;
+    margin: 5px auto;
     padding: 10px;
+    width: 480px;
+    text-align: center;
+    background-color: white;
+    font-family: 'Cabin', sans-serif;
+    box-shadow: 2px 2px 7px 1px rgb(200, 165, 230);
+}
+#incorrectAnswer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background:  rgb(69, 57, 80);
+    padding: 3%;
+    width: 750px;
+}
+#incorrectAnswer h1 {
+    font-family:'Cabin', sans-serif;
+    font-size: 30pt;
+    color: #202c2d;
+    background: #FFFFFF;
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+}
+#incorrectAnswer h3 {
+    font-family: 'Cabin', sans-serif;
+    color: #d9d9d9;
+    text-shadow: -1px -1px 3px rgba(255,255,255,.1), 3px 3px 3px rgba(0,0,0,.5);
+}
+.nextButton {
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+}
+
+#finalScore {
+    width: 750px;
+    margin: auto;
+    padding: 25px;
+    font-family: 'Cabin', sans-serif;
+}
+#finalScore h1 {
+    font-size: 25pt;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+#finalScore h3 {
+    font-size: 20pt;
+}
+#finalScore h4 {
+    font-style: italic;
+}
+.retakeButton {
+    margin: 2px auto;
+    margin-bottom: 2%;
+    width: 200px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+
+.box {
+    display: flex;
+    height: 500px;
+    text-align: center;
+    margin: 2% 10%;
+    flex-direction: column;
     box-shadow: 5px 5px 15px 5px #000000;
     background-color: white;
 }
-.incorrectAnswer {
+#startQuizBox {
+    padding: 10%
+}
+.letsTest {
+    font-size: 30px;
+}
+.eivStart {
+    font-size: 50px;
+    text-shadow: 10px 10px 10px rgba(37,42,207,0.36);
+    margin: 2%;
+}
+.startButton {
     display: flex;
-    flex-direction: column;
-    height: 500px;
+    margin: auto;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(221, 232, 247);
+}
+
+#questionBox {
+    padding: 3%;
+    border: 5px groove rgb(37, 26, 48);
+    justify-content: left;
+}
+legend {
+    padding: 2%;
+    border: groove rgb(69, 57, 80);
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.questions {
+    display: inline-block;
     text-align: left;
-    margin: 2% 10%;
+    width: 100%;
+    margin: 4%;
+    font-family: 'Cabin', sans-serif;
+    padding: 5px;
+}
+#submit {
+    margin-bottom: 2%;
+    width: 200px;
+    height: 50px;
+}
+
+.giphy-embed {
+    display: flex;
+    margin: 0 auto;  
+}
+
+#correctAnswer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background:  rgb(69, 57, 80);
+    padding: 3%;
+    width: 600px;
+}
+#correctAnswer h1{
+    font-family:'Cabin', sans-serif;
+    font-size: 30pt;
+    color: #FFF;
+    text-shadow: 0 0 5px black, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fdee64, 0 0 30px  #fdee64, 0 0 40px  #fdee64, 0 0 55px #fdee64, 0 0 75px  #fdee64
+}
+.correct {
+    display: block;
+    margin: 5px auto;
     padding: 10px;
+    width: 480px;
+    text-align: center;
+    background-color: white;
+    font-family: 'Cabin', sans-serif;
+    box-shadow: 2px 2px 7px 1px rgb(200, 165, 230);
+}
+#incorrectAnswer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background:  rgb(69, 57, 80);
+    padding: 3%;
+    width: 600px;
+}
+#incorrectAnswer h1 {
+    font-family:'Cabin', sans-serif;
+    font-size: 30pt;
+    color: #202c2d;
+    background: #FFFFFF;
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+}
+#incorrectAnswer h3 {
+    font-family: 'Cabin', sans-serif;
+    color: #d9d9d9;
+    text-shadow: -1px -1px 3px rgba(255,255,255,.1), 3px 3px 3px rgba(0,0,0,.5);
+}
+.nextButton {
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+}
+
+#finalScore {
+    width: 600px;
+    margin: auto;
+    padding: 25px;
+    font-family: 'Cabin', sans-serif;
+}
+#finalScore h1 {
+    font-size: 25pt;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+#finalScore h3 {
+    font-size: 20pt;
+}
+#finalScore h4 {
+    font-style: italic;
+}
+.retakeButton {
+    margin: 2px auto;
+    margin-bottom: 2%;
+    width: 200px;
+    height: 50px;
+}
+
+}
+
+@media only screen and (max-width: 380px) {
+.box {
+    display: flex;
+    height: 300px;
+    text-align: center;
+    margin: 2% 10%;
+    flex-direction: column;
     box-shadow: 5px 5px 15px 5px #000000;
     background-color: white;
 }
-.finalScore {
+li {
     display: flex;
-    flex-direction: column;
-    height: 500px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 33.33%;
+    font-size: 15px;
+    font-variant: small-caps;
+    font-weight: 700; 
+}
+.hudLogo {
+    opacity: 0.5;
+    margin-left: 8px;
+}
+.letsTest {
+    font-size: 20px;
+    text-align: center;
+}
+.eivStart {
+    font-size: 25px;
+    text-shadow: 5px 5px 5px rgba(37,42,207,0.36);
+    margin: 2%;
+}
+.startButton {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 80px;
+    height: 25px;
+    background-color: rgb(221, 232, 247);
+}
+#questionBox {
+    padding: 3%;
+    border: 2px groove rgb(37, 26, 48);
+    justify-content: left;
+}
+legend {
+    padding: 2%;
+    border: groove rgb(69, 57, 80);
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 7pt;
+}
+
+.questions {
+    display: inline-block;
     text-align: left;
-    margin: 2% 10%;
-    padding: 10px;
-    box-shadow: 5px 5px 15px 5px #000000;
+    width: 100%;
+    margin: 4%;
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+}
+#submit {
+    margin-bottom: 2%;
+    width: 80px;
+    height: 25px;
+}
+
+.giphy-embed {
+    display: flex;
+    margin: 0 auto;  
+    max-width: 200px;
+}
+
+#correctAnswer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background:  rgb(69, 57, 80);
+    padding: 3%;
+    width: 300px;
+    height: 400px;
+}
+#correctAnswer h1{
+    font-family:'Cabin', sans-serif;
+    margin-top: 20px;
+    font-size: 20pt;
+    color: #FFF;
+    text-shadow: 0 0 3px black, 0 0 7px #FFF, 0 0 10px #FFF, 0 0 13px #fdee64, 0 0 20px  #fdee64, 0 0 25px  #fdee64, 0 0 40px #fdee64, 0 0 50px  #fdee64
+}
+.correct {
+    display: block;
+    margin: 2px auto;
+    padding: 7px;
+    width: 200px;
+    text-align: center;
     background-color: white;
+    font-family: 'Cabin', sans-serif;
+    font-size: 8pt;
+    box-shadow: 2px 2px 4px 1px rgb(200, 165, 230);
+}
+#incorrectAnswer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background:  rgb(69, 57, 80);
+    padding: 3%;
+    width: 300px;
+    height: 400px;
+}
+#incorrectAnswer h1 {
+    margin-top: 10px;
+    font-family:'Cabin', sans-serif;
+    font-size: 15pt;
+    color: #202c2d;
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 1px #808d93, -1px 1px #cdd2d5, -2px 2px #808d93, -2px 2px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 4px #808d93, -4px 4px #cdd2d5;
+}
+#incorrectAnswer h3 {
+    font-family: 'Cabin', sans-serif;
+    color: #d9d9d9;
+    text-shadow: -1px -1px 3px rgba(255,255,255,.1), 3px 3px 3px rgba(0,0,0,.5);
+}
+.nextButton {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+}
+
+#finalScore {
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    padding: 15px;
+    font-family: 'Cabin', sans-serif;
+}
+#finalScore h1 {
+    font-size: 15pt;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+#finalScore h3 {
+    font-size: 13pt;
+}
+#finalScore h4 {
+    font-style: italic;
+    font-size: 8pt;
+}
+.retakeButton {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 130px;
+    height: 50px;
+}
 }

@@ -6,15 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EIV Quiz</title>
     <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Cabin&display=swap" rel="stylesheet">
+    <script src="./jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <main role="main" class="container">
-<!--Start Page-->
+<!--Header-->
         <header role="banner" class="banner">
             <section> 
                 <ul class="questionProgress">
-                    <li class="questionNumber">Question:
-                        <span class="currentQuestion"> 0</span> / 5</li>
+                    <li class="questionNumber">
+                        Question:&nbsp;
+                        <span id="currentQuestion">0</span>
+                        &nbsp;/&nbsp;
+                        <span id="totalQuestions">5</span>
+                    </li>
                     <li class="hudLogo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg/800px-Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg.png" alt="HUD logo" style="width:100px;height:100px;"></li>
                     <li class="questionScore">Score:
                         <span class="currentScore">0</span>
@@ -22,103 +28,71 @@
                 </ul>
             </section>
         </header>
-        <section class="startQuizBox box">
+<!--Start Page-->
+        <section id="startQuizBox" class="box" style="display: none;">
             <h3 class="letsTest">Let's test your knowledge of HUD's</h3> 
             <h3 class="eivStart">Enterprise Income Verification System (EIV)</h3>
-            <button type="button" class="startButton button">Start Quiz</button>
+            <button type="button" class="startButton button" onclick="showNext()">Start Quiz</button>
         </section>
 <!--Question Page-->
-        <header role="banner" class="banner">
-            <section> 
-                <ul class="questionProgress">
-                    <li class="questionNumber">Question:
-                        <span class="currentQuestion"> 0</span> / 5</li>
-                    <li class="hudLogo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg/800px-Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg.png" alt="HUD logo" style="width:100px;height:100px;"></li>
-                    <li class="questionScore">Score:
-                        <span class="currentScore">0</span>
-                    </li>
-                </ul>
-            </section>
-        </header>
-        <section class="questionBox">
+        <section id="questionBox" class="box" style="display: none;">
             <form>
-                <fieldset>
-                    <legend class="questionText">Question goes here</legend>
-                        <label class="quizBoxMain" for="0">
-                            <input class="radio" type="radio" id="0" value="Option 'a' goes here" name="answer" required>
-                                <span>Option 'a' goes here</span>
-                        <label class="quizBoxMain" for="1">
-                            <input class="radio" type="radio" id="1" value="Option 'b' goes here" name="answer" required>
-                                <span>Option 'b' goes here</span>
-                        <label class="quizBoxMain" for="2">
-                            <input class="radio" type="radio" id="2" value="Option 'c' goes here" name="answer" required>
-                                <span>Option 'c' goes here</span>
-                        <label class="quizBoxMain" for="3">
-                            <input class="radio" type="radio" id="3" value="Option 'd' goes here" name="answer" required>
-                                <span>Option 'd' goes here</span>
-                    </label>
-                </fieldset>
+                <legend class="questionText"></legend>
+                    <div class="questions">
+                        <label class="quizBoxMain" for="1"></label>
+                        <input class="radio" type="radio" id="1" name="answer" required>
+                        <span class="answer1"></span>
+                        <br>
+                        <br>
+                        <label class="quizBoxMain" for="2"></label>
+                        <input class="radio" type="radio" id="2" name="answer" required>
+                        <span class="answer2"></span>
+                        <br>
+                        <br>
+                        <label class="quizBoxMain" for="3"></label>
+                        <input class="radio" type="radio" id="3" name="answer" required>
+                        <span class="answer3"></span>
+                        <br>
+                        <br>
+                        <label class="quizBoxMain" for="4"></label>
+                        <input class="radio" type="radio" id="4" name="answer" required>
+                        <span class="answer4"></span>
+                    </div>
+                <br>
+                <input id="submit" type="submit" />
             </form>
         </section>
 <!--Correct Answer Page-->
-        <header role="banner" class="banner">
-            <section> 
-                <ul class="questionProgress">
-                    <li class="questionNumber">Question:
-                        <span class="currentQuestion"> 0</span> / 5</li>
-                    <li class="hudLogo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg/800px-Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg.png" alt="HUD logo" style="width:100px;height:100px;"></li>
-                    <li class="questionScore">Score:
-                        <span class="currentScore">0</span>
-                    </li>
-                </ul>
-            </section>
-        </header>
-        <section class="correctAnswer">
+        <section id="correctAnswer" class="box" style="display: none;">
             <h1>That's correct!</h1> 
-            <h3>(Correct answer here)</h3>
-            <button type="button" class="nextButton">Next Question</button>
+           
+            <br>
+            <iframe src="https://giphy.com/embed/d1E1D71SSsVn46vS" width="480" height="480" frameBorder="0" class="giphy-embed" style="pointer-events: none;" allowFullScreen></iframe><a href="https://giphy.com/gifs/dietcig-diet-cig-d1E1D71SSsVn46vS"></a></p>
+            <span class="correct"></span>
+            <button type="button" class="nextButton" onclick="showNext()">Next Question</button>
         </section>
 <!--Incorrect Answer Page-->
-        <header role="banner" class="banner">
-            <section> 
-                <ul class="questionProgress">
-                    <li class="questionNumber">Question:
-                        <span class="currentQuestion"> 0</span> / 5</li>
-                    <li class="hudLogo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg/800px-Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg.png" alt="HUD logo" style="width:100px;height:100px;"></li>
-                    <li class="questionScore">Score:
-                        <span class="currentScore">0</span>
-                    </li>
-                </ul>
-            </section>
-        </header>
-        <section class="incorrectAnswer">
+        <section id="incorrectAnswer" class="box" style="display: none;">
             <h1>Unfortunately, that's incorrect.</h1> 
+            <br>
+            <iframe src="https://giphy.com/embed/fxgVuoKyZwEOudRXuj" width="480" height="480" frameBorder="0" class="giphy-embed" style="pointer-events: none" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/spotify-play-streaming-fxgVuoKyZwEOudRXuj"></a></p>
+            <br>
             <h3>The correct answer is:</h3>
-            <h3>(Correct answer here)</h3>
-            <button type="button" class="nextButton">Next Question</button>
+            <span class="correct"></span>
+            <button type="button" class="nextButton" onclick="showNext()">Next Question</button>
         </section>
 <!--Score Page-->   
-        <header role="banner" class="banner">
-            <section> 
-                <ul class="questionProgress">
-                    <li class="questionNumber">Question:
-                        <span class="currentQuestion"> 0</span> / 5</li>
-                    <li class="hudLogo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg/800px-Seal_of_the_United_States_Department_of_Housing_and_Urban_Development.svg.png" alt="HUD logo" style="width:100px;height:100px;"></li>
-                    <li class="questionScore">Score:
-                        <span class="currentScore">0</span>
-                    </li>
-                </ul>
-            </section>
-        </header>
-        <section class="finalScore">
-            <h1>You got _____ out of 5 questions correct!</h1>
+        <section id="finalScore" class="box" style="display: none;">
+            <h1>You got <span id="correctQuestions" ></span> out of 5 questions correct!</h1>
             <br>
-            <h3>Your final score is: _______ points</h3>
+            <iframe src="https://giphy.com/embed/vIZ0U63Ig0uOI" width="480" height="480" frameBorder="0" class="giphy-embed" style="pointer-events: none" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/high-quality-drop-mic-vIZ0U63Ig0uOI"></a></p>
+            <h3>Your final score is:  <span id="totalPoints"></span> points</h3>
             <br>
             <h4>Think you can do better?</h4>
-            <button type="button" class="retakeButton">Retake Quiz</button>
+            <button type="button" class="retakeButton" onclick="retakeQuiz()">Retake Quiz</button>
         </section>
     </main>
+    <script src="./index.js"></script>
 </body>
 </html>
 
